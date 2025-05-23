@@ -5,6 +5,7 @@ import PostList from "@/components/PostList";
 import { Container } from "@/components/Container";
 import Image from "next/image";
 import Link from "next/link";
+import { PostHeading } from "@/components/PostHeading";
 
 export default async function Home() {
   return (
@@ -14,7 +15,7 @@ export default async function Home() {
 
         <Link
           className="w-full h-full overflow-hidden transition rounded-xl"
-          href="/"
+          href="/contatos"
         >
           <Image
             className="hover:scale-105 object-cover object-center"
@@ -26,16 +27,14 @@ export default async function Home() {
           ></Image>
         </Link>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 sm:justify-center">
 
           <time dateTime="2025-04-20" className="text-slate-600 text-sm">20/04/2025 10:00</time>
 
-          <h1 className="text-2xl/tight font-extrabold sm:text-4xl">
-            <Link href="#">
-              Lorem ipsum dolor sit amet.
-            </Link>
-          </h1>
-
+          <PostHeading as="h1" url="#">
+             Lorem ipsum dolor sit amet.
+          </PostHeading>
+             
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium
           obcaecati explicabo mollitia recusandae. Veniam libero dignissimos ab
           ipsam odit recusandae pariatur eligendi molestiae debitis, nihil
