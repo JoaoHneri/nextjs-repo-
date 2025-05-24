@@ -18,7 +18,3 @@ export function formatRelativeDateFns(rawDate: string) {
         addSuffix: true,
     });
 }
-
-const rawDate = "2023-10-01T12:00:00Z";
-console.log(formatDatetime(rawDate)); // 01/10/2023 às 12h00
-console.log(formatRelativeDateFns(rawDate)); // há 2 dias

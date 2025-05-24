@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Header } from "@/components/Header";
+import { Container } from "@/components/Container";
 
 export const metadata: Metadata = {
-  title: "The blog - Joao's Blog",
+  title: {
+    default: "The blog - Joao's Blog",
+    template: "%s - Joao's Blog",
+  },
   description: "Blog mais famoso de fsa",
 };
 
@@ -13,7 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body>{children}</body>
+      <body>
+        <Container>
+          <Header />
+          {children}
+        </Container>
+      </body>
     </html>
   );
 }
