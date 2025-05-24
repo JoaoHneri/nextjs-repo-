@@ -15,6 +15,7 @@ export default async function Home() {
       <Suspense fallback={<SpinLoader />}>
         <PostList />
       </Suspense>
+    
     </>
   );
 }
