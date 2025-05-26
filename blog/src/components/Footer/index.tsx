@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="text-gray-300 py-12">
+    <footer className="text-gray-300 py-6">
       <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
         <p className="text-gray-400 text-sm">
           &copy; {new Date().getFullYear()} NextCourses Blog. Todos os direitos

@@ -11,7 +11,7 @@ export async function PostFeatured() {
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
       <PostCoverImage
-        href="/contatos"
+        href={postLink}
         src={post.coverImageUrl}
         width={1200}
         height={720}
