@@ -1,8 +1,8 @@
 import { InferInsertModel, InferSelectModel } from 'drizzle-orm';
-import { boolean, mysqlTable, serial, text} from 'drizzle-orm/mysql-core';
+import { boolean, mysqlTable,  text, varchar} from 'drizzle-orm/mysql-core';
 
 export const postsTable = mysqlTable('posts', {
-  id: serial().primaryKey(),
+  id: varchar('id', { length: 36 }).primaryKey(),
   slug: text('slug').notNull(),
   title: text('title').notNull(),
   author: text('author').notNull(),

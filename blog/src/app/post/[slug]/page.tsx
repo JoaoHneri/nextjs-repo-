@@ -15,8 +15,8 @@ export async function generateMetadata({
   const post = await findPostBySlugCached(slug);
 
   return {
-    title: post.title,
-    description: post.excerpt,
+    title: post.title || 'Post',
+    description: post.excerpt || 'This is a post description',
   };
 }
 
