@@ -2,7 +2,7 @@ import { PostModel } from "@/models/post/post-model";
 import { PostRepository } from "./post-repository";
 import { drizzleDb } from "@/db/drizzle";
 import { postsTable } from "@/db/drizzle/schema";
-import { desc, eq } from "drizzle-orm";
+import { desc, eq, and } from "drizzle-orm";
 
 
 export class DrizzlePostRepository implements PostRepository {
@@ -21,8 +21,7 @@ export class DrizzlePostRepository implements PostRepository {
         const posts = await drizzleDb
             .select()
             .from(postsTable)
-            .where(eq(postsTable.published, true))
-            .where(eq(postsTable.slug, slug))
+            .where(and(eq(postsTable.published, true), eq(postsTable.slug, slug)))
             .limit(1);
 
         return posts[0] || null;

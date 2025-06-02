@@ -18,3 +18,11 @@ export function formatRelativeDateFns(rawDate: string) {
         addSuffix: true,
     });
 }
+
+export function formatHour(rawDate: number): string {   
+    const date = new Date(rawDate);
+
+    return format(date, "HH:mm:ss", {
+        locale: ptBR,
+    });
+}
